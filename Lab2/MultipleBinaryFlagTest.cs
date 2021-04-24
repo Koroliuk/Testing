@@ -13,6 +13,7 @@ namespace Lab2
             var flag1 = new MultipleBinaryFlag(2);
             var flag2 = new MultipleBinaryFlag(543, true);
             var flag3 = new MultipleBinaryFlag(1717986, false);
+            var flag4 = new MultipleBinaryFlag(17179868704);
 
             var expected1 = string.Concat(Enumerable.Repeat("T", 2));
             var expected2 = string.Concat(Enumerable.Repeat("T", 543));
@@ -21,18 +22,20 @@ namespace Lab2
             Assert.Equal(expected1, flag1.ToString());
             Assert.Equal(expected2, flag2.ToString());
             Assert.Equal(expected3, flag3.ToString());
+            Assert.IsType<MultipleBinaryFlag>(flag4);
         }
 
         [Fact]
         public void CreateNewMultipleBinaryFlag_ToFail_WithBiggerThanMaxLength()
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => new MultipleBinaryFlag(17179868705));
+            Assert.Throws<ArgumentOutOfRangeException>(() => new MultipleBinaryFlag(23423423423, false));
         }
 
         [Fact]
         public void CreateNewMultipleBinaryFlag_ToFail_WithLessThanMinLength()
         {
-            Assert.Throws<ArgumentOutOfRangeException>(() => new MultipleBinaryFlag(1));
+            Assert.Throws<ArgumentOutOfRangeException>(() => new MultipleBinaryFlag(1, false));
         }
 
         [Fact]
