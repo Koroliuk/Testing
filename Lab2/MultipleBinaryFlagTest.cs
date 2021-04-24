@@ -49,8 +49,8 @@ namespace Lab2
         {
             var flag = new MultipleBinaryFlag(40, false);
 
-            flag.SetFlag(12);
             flag.SetFlag(0);
+            flag.SetFlag(12);
             flag.SetFlag(39);
             var expected = "T" + string.Concat(Enumerable.Repeat("F", 11)) + "T"
                            + string.Concat(Enumerable.Repeat("F", 26)) + "T";
