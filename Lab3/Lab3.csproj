@@ -18,23 +18,11 @@
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
     </ItemGroup>
-
+    
     <ItemGroup>
-      <Reference Include="IIG.BinaryFlag, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\Lib\IIG.BinaryFlag\IIG.BinaryFlag.dll</HintPath>
-      </Reference>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Remove="obj\**" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <EmbeddedResource Remove="obj\**" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <None Remove="obj\**" />
+      <Compile Include="..\Lib\IIG.PasswordHashingUtils\PasswordHasher.cs">
+        <Link>PasswordHasher.cs</Link>
+      </Compile>
     </ItemGroup>
 
 </Project>
