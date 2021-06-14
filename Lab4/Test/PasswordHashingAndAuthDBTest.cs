@@ -10,8 +10,8 @@ namespace Lab4
         private const string Server = @"DESKTOP-RQEAFUO\Server";
         private const string Database = @"IIG.CoSWE.AuthDB";
         private const bool IsTrusted = false;
-        private const string Login = @"sa";
-        private const string Password = @"admin1";
+        private const string Login = @"coswe";
+        private const string Password = @"L}EjpfCgru9X@GLj";
         private const int ConnectionTimeout = 75;
         private AuthDatabaseUtils dbManager = new(Server, Database,
             IsTrusted, Login, Password, ConnectionTimeout);
