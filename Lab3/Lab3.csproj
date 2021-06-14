@@ -18,11 +18,9 @@
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
     </ItemGroup>
-    
+
     <ItemGroup>
-      <Compile Include="..\Lib\IIG.PasswordHashingUtils\PasswordHasher.cs">
-        <Link>PasswordHasher.cs</Link>
-      </Compile>
+      <ProjectReference Include="..\Lib\IIG.PasswordHashingUtils\IIG.PasswordHashingUtils\IIG.PasswordHashingUtils.csproj" />
     </ItemGroup>
 
 </Project>
